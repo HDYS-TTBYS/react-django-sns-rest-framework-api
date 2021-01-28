@@ -1,0 +1,13 @@
+version: "3"
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: "python3.7.9"
+    working_dir: "/app"
+    tty: true
+    user: root
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
